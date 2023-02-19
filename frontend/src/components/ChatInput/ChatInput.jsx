@@ -10,3 +10,4 @@ class ChatInput extends Component {
         )
     }
 }
+export default ChatInput
