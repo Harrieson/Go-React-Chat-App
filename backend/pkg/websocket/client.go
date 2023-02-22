@@ -1,5 +1,8 @@
+package websocket
+
 import (
-	"go-reactt-chat/websocket"
+	"go-reactt-chat/pkg/websocket"
+	"sync"
 )
 
 type Client struct {
@@ -7,4 +10,8 @@ type Client struct {
 	Conn *websocket.Conn
 	Pool *Pool
 	mu   sync.Mutex
+}
+
+func (c *Client) Read() {
+
 }
