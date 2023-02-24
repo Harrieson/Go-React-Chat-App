@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-reactt-chat/pkg/websocket"
+	"go-react-chat/pkg/websocket"
 	"net/http"
 )
 
@@ -12,7 +12,7 @@ func serveWS(pool *websocket.Pool, w http.ResponseWriter, r *http.Request) {
 	conn, err := websocket.Upgrade(w, r)
 
 	if err != nil {
-		fmt.Fprint(w, "%+V\n", err)
+		fmt.Fprint(w, "%+v\n", err)
 	}
 	client := &websocket.Client{
 		Conn: conn,
